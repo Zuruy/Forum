@@ -1,0 +1,145 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('../image/_759120f3-76ee-46d5-95a0-35faf305843f.jpg');
+    background-size: cover;
+    background-position: center;   
+}
+.container{
+  
+    width: 100%;
+    height: 100dvh;
+    
+}
+.login{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    background-color: rgba(42, 42, 42, 0.949);
+    
+    width: 100%;
+    max-width: 300px;
+    padding:10px;
+  
+}
+.login h2{
+    color: white;
+    text-align: center;
+}
+.login_form{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.input_login{
+    width: 90%;
+    margin-bottom: 15px;
+    color: white;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 1.0em;
+    background-color: rgba(11, 11, 11, 0.959);
+    outline: none;
+}
+.input_login:focus{
+    border: 1px solid white;
+
+}
+.button_login{
+    cursor: pointer;
+    width: 80px;
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition-duration: .5s;
+
+
+}
+.button_login:hover{
+    background-color: black;
+    color: white;
+    
+}
+.chat{
+    width: 100%;
+   
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.chat_messagem{
+    padding: 30px 30px 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+.chat_form{
+    gap: 10px;
+    width: 100%;
+    left: 0;
+    position: fixed;
+    bottom: 0;
+     background-color: rgb(0, 0, 0);
+     padding: 15px 10px;
+     display: flex;
+     align-items: center;
+
+}
+.input_chat{
+    border: none;
+    color: white;
+    letter-spacing:1px;
+    background-color: rgb(27, 27, 27);
+    font-size: 15px;
+    width: 90%;
+    padding: 8px;
+    outline: none;
+    border-radius: 10px;
+
+}
+.button_chat{
+    font-size: 35px;
+    color: rgb(160, 160, 160);
+    background: none;
+    border: none;
+}
+.chat_messagem > div{
+    width: 100%;
+    max-width: 250px;
+    padding: 15px;
+    line-height: 22px;
+    margin-bottom: 15px;
+
+}
+.send{
+
+   
+    background-color: white;
+    color: black;
+    border-radius: 15px 15px 0 15px;
+    align-self: flex-end;
+}
+.other{
+    background-color: rgb(69, 20, 115);
+    border-radius: 15px 15px 15px 0px;
+    color: white;
+    align-self: flex-start;
+}
+.sender{
+    display: block;
+    margin-bottom: 15px;
+
+    font-weight: 600;
+
+    
+}
