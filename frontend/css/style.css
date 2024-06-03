@@ -1,145 +1,157 @@
-body{
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url('../image/_759120f3-76ee-46d5-95a0-35faf305843f.jpg');
-    background-size: cover;
-    background-position: center;   
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
 }
-.container{
-  
+
+:root {
+    font-size: 16px;
+}
+
+body {
+    background: url("../images/_759120f3-76ee-46d5-95a0-35faf305843f.jpg");
+    color: #f2f2f2;
+}
+
+.container {
     width: 100%;
     height: 100dvh;
-    
-}
-.login{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    border-radius: 10px;
-    background-color: rgba(42, 42, 42, 0.949);
-    
-    width: 100%;
-    max-width: 300px;
-    padding:10px;
-  
-}
-.login h2{
-    color: white;
-    text-align: center;
-}
-.login_form{
+    display: flex;
     align-items: center;
+    justify-content: center;
+}
+
+.login {
+    width: 100%;
+    max-width: 330px;
+    background-color: #212121;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.login > h2 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.login__form {
     display: flex;
     flex-direction: column;
+    gap: 15px;
 }
-.input_login{
-    width: 90%;
-    margin-bottom: 15px;
-    color: white;
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 5px;
-    font-size: 1.0em;
-    background-color: rgba(11, 11, 11, 0.959);
+
+.login__input {
+    border: none;
+    padding: 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background-color: #121212;
+    color: #f2f2f2;
     outline: none;
-}
-.input_login:focus{
-    border: 1px solid white;
-
-}
-.button_login{
-    cursor: pointer;
-    width: 80px;
-    padding: 10px;
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
     border-radius: 5px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    transition-duration: .5s;
-
-
 }
-.button_login:hover{
-    background-color: black;
-    color: white;
-    
+
+.login__input:focus {
+    outline: 2px solid #f2f2f2;
 }
-.chat{
+
+.login__button {
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    background-color: #ddd;
+    cursor: pointer;
+    color: #121212;
+}
+
+.login__button:hover {
+    background-color: #fff;
+}
+
+.chat {
     width: 100%;
-   
     height: 100%;
     display: none;
     flex-direction: column;
     justify-content: space-between;
 }
-.chat_messagem{
+
+.chat__messages {
+    flex-grow: 1;
     padding: 30px 30px 90px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    flex-grow: 1;
 }
-.chat_form{
+
+.chat__form {
+    background-color: #191919;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
     gap: 10px;
-    width: 100%;
-    left: 0;
     position: fixed;
     bottom: 0;
-     background-color: rgb(0, 0, 0);
-     padding: 15px 10px;
-     display: flex;
-     align-items: center;
-
+    left: 0;
+    width: 100%;
 }
-.input_chat{
+
+.chat__input {
     border: none;
-    color: white;
-    letter-spacing:1px;
-    background-color: rgb(27, 27, 27);
-    font-size: 15px;
-    width: 90%;
-    padding: 8px;
+    padding: 15px;
+    border-radius: 8px;
+    flex-grow: 1;
+    background-color: #212121;
     outline: none;
-    border-radius: 10px;
+    color: #f2f2f2;
+    font-size: 1rem;
+}
 
-}
-.button_chat{
-    font-size: 35px;
-    color: rgb(160, 160, 160);
-    background: none;
+.chat__button {
     border: none;
+    background: none;
+    color: #f2f2f2;
+    cursor: pointer;
 }
-.chat_messagem > div{
+
+.chat__button > span {
+    font-size: 1.8rem;
+}
+
+.chat__messages > div {
+    padding: 15px;
     width: 100%;
     max-width: 250px;
-    padding: 15px;
-    line-height: 22px;
+    font-size: 15px;
+    font-weight: 500;
     margin-bottom: 15px;
-
+    line-height: 22px;
 }
-.send{
 
-   
-    background-color: white;
-    color: black;
-    border-radius: 15px 15px 0 15px;
+.message--self {
+    background-color: #f2f2f2;
+    color: #121212;
+    border-radius: 10px 10px 0 10px;
     align-self: flex-end;
 }
-.other{
-    background-color: rgb(69, 20, 115);
-    border-radius: 15px 15px 15px 0px;
-    color: white;
+
+.message--other {
+    background-color: rgb(100, 1, 100);
+    color: #f2f2f2;
+    border-radius: 10px 10px 10px 0;
     align-self: flex-start;
 }
-.sender{
+
+.message--sender {
     display: block;
     margin-bottom: 15px;
-
-    font-weight: 600;
-
-    
+    font-weight: 700;
+    color: cadetblue;
 }

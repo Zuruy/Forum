@@ -2,54 +2,47 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.
-    0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="shortcut icon" href="images/logo (2).jpg" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
     <link rel="stylesheet" href="./css/style.css">
 
-    <link rel="stylesheet"
-    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">  
-    <title>Chat</title>
+    <title>Yumi-Chat</title>
 </head>
 <body>
- 
- <section class="container">
-     <section class="login">
+    
+    <section class="container">
 
-        <form 
-        class="login_form">
-         <h2>Login</h2>
-            <input type="text" class="input_login" placeholder="Digite um Apelido" required>
-
-            <button type="submit" class="button_login">Entra</button>
-        </form>
-
-    </section>
-
-    <section class="chat">
-        <section class="chat_messagem">
-      <!--
-            <div class="send">Yumi</div>
-            
-            <div class="other">
-                <span class="sender">Manual do Dev</span>
-                Olá, Mundo!
-      -->
+        <section class="login">
+            <h2>Login</h2>
+            <form class="login__form">
+                <input type="text" class="login__input" placeholder="Seu nome" required />
+                <button type="submit" class="login__button">Entrar</button>
+            </form>
         </section>
-        <form 
-        class="chat_form">
-        
-            <input type="text" class="input_chat" placeholder="Digite a menssagen" required>
-            
-            <button type="submit" class="button_chat">
-                <i class='bx bx-message-square-dots'></i>
-            </button>
-        </form>
+
+        <section class="chat">
+            <section class="chat__messages">
+                <!-- <div class="message--self">Hello, World!</div>
+
+                <div class="message--other">
+                    <span class="message--sender">Manual do Dev</span>
+                    Olá, Mundo!
+                </div> -->
+            </section>
+
+            <form class="chat__form">
+                <input type="text" class="chat__input" placeholder="Digite uma mensagem" required />
+                <button type="submit" class="chat__button">
+                    <span class="material-symbols-outlined">send</span>
+                </button>
+            </form>
+        </section>
+
     </section>
- </section>
 
-
-
-<script src="./script/script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
