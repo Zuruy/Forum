@@ -45,7 +45,7 @@ body {
     gap: 15px;
 }
 
-.login__input {
+.login__input, .login__file {
     border: none;
     padding: 15px;
     font-size: 0.85rem;
@@ -56,8 +56,22 @@ body {
     border-radius: 5px;
 }
 
-.login__input:focus {
+.login__input:focus, .login__file:focus {
     outline: 2px solid #f2f2f2;
+}
+
+.login__file {
+    display: none;
+}
+
+.login__file-label {
+    background-color: #121212;
+    color: #f2f2f2;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 600;
 }
 
 .login__button {
@@ -114,25 +128,39 @@ body {
     font-size: 1rem;
 }
 
-.chat__button {
+.chat__button, .chat__file-button {
     border: none;
     background: none;
     color: #f2f2f2;
     cursor: pointer;
 }
 
-.chat__button > span {
+.chat__button > span, .chat__file-button > span {
     font-size: 1.8rem;
 }
 
-.chat__messages > div {
-    padding: 15px;
-    width: 100%;
-    max-width: 250px;
+.chat__messages img {
+    max-width: 100%;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.message--profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.message--self, .message--other {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+    max-width:250px ;
     font-size: 15px;
-    font-weight: 500;
-    margin-bottom: 15px;
-    line-height: 22px;
+
+    
 }
 
 .message--self {
@@ -140,6 +168,7 @@ body {
     color: #121212;
     border-radius: 10px 10px 0 10px;
     align-self: flex-end;
+    padding-right: 15px;
 }
 
 .message--other {
@@ -147,6 +176,12 @@ body {
     color: #f2f2f2;
     border-radius: 10px 10px 10px 0;
     align-self: flex-start;
+    padding-left: 15px;
+}
+
+.message--self .message--profile-picture,
+.message--other .message--profile-picture {
+    margin-bottom: 5px;
 }
 
 .message--sender {
@@ -154,4 +189,40 @@ body {
     margin-bottom: 15px;
     font-weight: 700;
     color: cadetblue;
+    
+}
+.message--sender {
+    display: block;
+    font-weight: 700;
+    color: cadetblue;
+    margin-left: 5px;
+}
+
+.message--with-sender {
+    margin-bottom: 15px;
+    
+
+}
+.message--with-sender {
+    margin-top: 10px; /* ou qualquer valor que você preferir */
+    margin-bottom: 15px; /* mantenha a margem inferior se desejar */
+}
+
+
+.message--other {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.message--sender {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.message--content {
+    background-color: rgb(100, 1, 100);
+    color: #f2f2f2;
+    border-radius: 10px;
+    padding: 10px;
 }
