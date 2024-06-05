@@ -141,7 +141,7 @@ body {
 
 .chat__messages img {
     max-width: 100%;
-    border-radius: 50%;
+    
     margin-top: 10px;
 }
 
@@ -159,6 +159,7 @@ body {
     padding: 10px;
     max-width:250px ;
     font-size: 15px;
+    margin-bottom: 15px;
 
     
 }
